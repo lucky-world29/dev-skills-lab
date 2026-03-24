@@ -1568,10 +1568,22 @@ button {
 
 /*--- Pattern Overlay
 -----------------------------------------------*/
-.pattern-overlay {
+/* .pattern-overlay {
   background-image: url(images/pattern1.png);
   background-repeat: no-repeat;
   background-position: top right;
+  /* margin-top: 50px;
+} */
+
+.pattern-overlay {
+  background-image: url(images/pattern1.png);
+  background-repeat: no-repeat;
+
+  /* responsive positioning */
+  background-position: right 40px top 120px;
+
+  /* responsive scaling */
+  background-size: clamp(200px, 35vw, 450px);
 }
 
 .leaf-pattern-overlay {
@@ -2455,6 +2467,47 @@ footer#footer {
 
 @media screen and (max-width: 575px) {
   .products-grid .product-style {
+    width: 100%;
+  }
+}
+
+/* Top bar responsive fixes */
+@media (max-width: 768px) {
+
+  .top-content .row {
+    align-items: center;
+  }
+
+  .social-links ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-content li {
+    padding-right: 15px;
+  }
+
+  .right-element {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .action-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  #header-wrap.show .search-bar {
+    width: 100%;
+  }
+
+  .search-input {
     width: 100%;
   }
 }
